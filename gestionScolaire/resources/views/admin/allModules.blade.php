@@ -83,7 +83,7 @@
                 @forelse ($modules as $module)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 font-medium text-blue-500 whitespace-nowrap dark:text-blue-500">
-                            <a href="{{route('show-module', ['id' => $module->id])}}">{{ $module->id }}</a>
+                            <a href="{{ route('show-module', ['id' => $module->id]) }}">{{ $module->id }}</a>
                         </th>
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $module->libelle }}
@@ -95,14 +95,15 @@
                             {{ $module->capacite }}
                         </td>
                         <td class="px-6 py-4 ">
-                          <form action="{{route('destroy-module',['id'=>$module->id])}}" method="post">
-                          @csrf
-                          @method('DELETE')
-                          <a href="{{route('edit-module', ['id'=>$module->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                          <button type="submit" onclick="return confirm('Are You Sure ? ')"
-                              class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                            <form action="{{ route('destroy-module', ['id' => $module->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <a href="{{ route('edit-module', ['id' => $module->id]) }}"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                <button type="submit" onclick="return confirm('Are You Sure ? ')"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
 
-                          </form>
+                            </form>
                         </td>
                     </tr>
                 @empty

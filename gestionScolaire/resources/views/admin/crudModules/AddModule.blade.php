@@ -1,7 +1,6 @@
 @extends('layouts.layout')
-
 @section('content')
-    <div class="flex  flex-col justify-center items-center h-screen">
+    <div class="flex flex-col justify-center items-center h-screen">
         <h2 class="text-2xl font-semibold mb-2 ">Add New Module</h2>
         <form class="max-w-md mx-auto mt-3" method="POST" action="{{ route('store-module') }}">
             @csrf
@@ -36,6 +35,7 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
+            </button>
         </form>
     </div>
 @endsection

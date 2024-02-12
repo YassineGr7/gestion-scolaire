@@ -51,9 +51,15 @@ Route::post('affectations/assign', [DashboardController::class, 'assignTeacher']
 
   // modules routes
 Route::get('/modules',[DashboardController::class, 'fetchModules'])->name('modules-list');
-Route::get('/modules/{id}', [DashboardController::class, 'showModule'])->name('show-module');
 Route::get('/modules/addNewModule', [DashboardController::class, 'createModule'])->name('add-module');
 Route::post('/modules/addNewModule', [DashboardController::class, 'storeModule'])->name('store-module');
+Route::get('/modules/{id}', [DashboardController::class, 'showModule'])->name('show-module');
+
+
+
+
+
+
 Route::get('/modules/edit/{id}', [DashboardController::class, 'editModule'])->name('edit-module');
 Route::put('/modules/edit/{id}', [DashboardController::class, 'updateModule'])->name('update-module');
 Route::delete('modules/delete/{id}',[DashboardController::class, 'destroyModule'])->name('destroy-module');

@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('content')
+@if($module)
     <div class="flex justify-center items-center h-screen">
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div class="flex flex-col items-center pb-10">
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
+    @endif
 @endsection
